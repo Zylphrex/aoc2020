@@ -22,14 +22,10 @@ fn main() -> io::Result<()> {
     let mut buffer = String::new();
     io::stdin().read_to_string(&mut buffer)?;
 
-    let func = match (day, part) {
-        ("1", "1") => Some(day1::part1::day1part1),
+    let result = match (day, part) {
+        ("1", "1") => day1::part1::day1part1(&buffer),
+        ("1", "2") => day1::part2::day1part2(&buffer),
         _ => None,
-    };
-
-    let result = match func {
-        Some(f) => f(&buffer),
-        None => None,
     };
 
     std::process::exit(match result {
