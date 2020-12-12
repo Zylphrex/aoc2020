@@ -23,8 +23,10 @@ var rootCmd = &cobra.Command{
       f = Day1.Day1Part1
     } else if Day == 1 && Part == 2 {
       f = Day1.Day1Part2
-    } else if Day == 2 && Part == 1{
+    } else if Day == 2 && Part == 1 {
       f = Day2.Day2Part1
+    } else if Day == 2 && Part == 2 {
+      f = Day2.Day2Part2
     }
 
     if f == nil {
