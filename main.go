@@ -18,8 +18,12 @@ var rootCmd = &cobra.Command{
 
     var f func(string) (string, error)
 
-    if Day == 1 && Part == 1 {
-      f = Day1.Day1Part1
+    if Day == 1 {
+      if Part == 1 {
+        f = Day1.Day1Part1
+      } else if Part == 2 {
+        f = Day1.Day1Part2
+      }
     } else {
       os.Exit(1)
     }
