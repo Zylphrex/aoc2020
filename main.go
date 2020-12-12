@@ -6,6 +6,7 @@ import (
   "os"
   "github.com/spf13/cobra"
   "github.com/zylphrex/aoc2020/src/Day1"
+  "github.com/zylphrex/aoc2020/src/Day2"
 )
 
 var rootCmd = &cobra.Command{
@@ -18,13 +19,15 @@ var rootCmd = &cobra.Command{
 
     var f func(string) (string, error)
 
-    if Day == 1 {
-      if Part == 1 {
-        f = Day1.Day1Part1
-      } else if Part == 2 {
-        f = Day1.Day1Part2
-      }
-    } else {
+    if Day == 1 && Part == 1{
+      f = Day1.Day1Part1
+    } else if Day == 1 && Part == 2 {
+      f = Day1.Day1Part2
+    } else if Day == 2 && Part == 1{
+      f = Day2.Day2Part1
+    }
+
+    if f == nil {
       os.Exit(1)
     }
 
