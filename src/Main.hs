@@ -11,6 +11,7 @@ import System.Exit            ( ExitCode ( ExitFailure )
                               )
 
 import Day1.Part1 ( day1part1 )
+import Day1.Part2 ( day1part2 )
 
 data AoC = Aoc { day  :: Int
                , part :: Int
@@ -28,6 +29,7 @@ main = do
         p = part config
         m = case (d, p) of
                 (1, 1) -> Just day1part1
+                (1, 2) -> Just day1part2
                 _ -> Nothing
     case m of
         Just f -> interact f
