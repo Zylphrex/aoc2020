@@ -27,6 +27,7 @@ fn main() -> io::Result<()> {
         ("1", "1") => day1::part1::day1part1(&buffer),
         ("1", "2") => day1::part2::day1part2(&buffer),
         ("2", "1") => day2::part1::day2part1(&buffer),
+        ("2", "2") => day2::part2::day2part2(&buffer),
         _ => None,
     };
 
