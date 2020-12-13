@@ -3,6 +3,7 @@ use clap::{Arg, App};
 
 mod day1;
 mod day2;
+mod day3;
 mod util;
 
 fn main() -> io::Result<()> {
@@ -28,6 +29,7 @@ fn main() -> io::Result<()> {
         ("1", "2") => day1::part2::day1part2(&buffer),
         ("2", "1") => day2::part1::day2part1(&buffer),
         ("2", "2") => day2::part2::day2part2(&buffer),
+        ("3", "1") => day3::part1::day3part1(&buffer),
         _ => None,
     };
 
