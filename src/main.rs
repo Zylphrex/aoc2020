@@ -2,6 +2,7 @@ use std::io::{self, Read};
 use clap::{Arg, App};
 
 mod day1;
+mod day2;
 mod util;
 
 fn main() -> io::Result<()> {
@@ -25,6 +26,7 @@ fn main() -> io::Result<()> {
     let result = match (day, part) {
         ("1", "1") => day1::part1::day1part1(&buffer),
         ("1", "2") => day1::part2::day1part2(&buffer),
+        ("2", "1") => day2::part1::day2part1(&buffer),
         _ => None,
     };
 
