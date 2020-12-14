@@ -8,6 +8,7 @@ import (
   "github.com/zylphrex/aoc2020/src/Day1"
   "github.com/zylphrex/aoc2020/src/Day2"
   "github.com/zylphrex/aoc2020/src/Day3"
+  "github.com/zylphrex/aoc2020/src/Day4"
 )
 
 var rootCmd = &cobra.Command{
@@ -32,6 +33,8 @@ var rootCmd = &cobra.Command{
       f = Day3.Day3Part1
     } else if Day == 3 && Part == 2 {
       f = Day3.Day3Part2
+    } else if Day == 4 && Part == 1 {
+      f = Day4.Day4Part1
     }
 
     if f == nil {
